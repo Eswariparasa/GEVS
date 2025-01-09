@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock and Roll - Sign In</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="logo2.jpg" alt="Mock and Roll Logo">
+        </div>
+        <h1>Welcome to Mock and Roll</h1>
+        <form id="signinForm">
+            <input type="email" id="signinEmail" placeholder="Enter your email" required>
+            <input type="password" id="signinPassword" placeholder="Enter your password" required>
+            <button type="submit">Sign In</button>
+        </form>
+        <p class="create-account">Don't have an account? 
+            <a href="signup.html">Create an account</a></p>
+        <p id="errorMessage" style="color: red;"></p> <!-- Error message area -->
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('signinForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form submission
+
+            // Get the email and password input values
+            const email = document.getElementById('signinEmail').value;
+            const password = document.getElementById('signinPassword').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Clear previous error message
+            errorMessage.textContent = '';
+
+            // Retrieve the list of users from localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Check if there is a matching email and password
+            let userFound = false;
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email === email && users[i].password === password) {
+                    userFound = true;
+                    break;
+                }
+            }
+
+            // Show error if the credentials do not match
+            if (!userFound) {
+                errorMessage.textContent = 'Invalid email or password!';
+                return;
+            }
+
+            // If successful, redirect to content page
+            alert('Login successful!');
+            window.location.href = 'content.html'; // Redirect to content page
+        });
+    </script>
+</body>
+</html>

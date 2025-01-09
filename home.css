@@ -1,0 +1,334 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(to right, #09203F ,#537895);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.navbar .logo1 img {
+    width: 150px;
+    height: auto;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius:100px ;
+}
+
+
+.navbar .logo {
+    font-size: 3em;
+    font-weight: bold;
+    float:left;
+    padding-left:3%;
+}
+
+.navbar div {
+    display: flex;
+    gap: 20px;
+    padding-right: 70px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    color: #007bff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .navbar div {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+}
+
+
+
+/* General Styles */ 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+    
+    
+}
+h1,p{
+    color: white;
+    margin-left: 250px;
+}
+/* Hero Section */
+.home {
+    background-image:url("flower3.jpg");
+    background-size: fit;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.kk{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(8, 8, 8);
+    padding-top: 550px;
+    padding-right: 1400px;
+    padding-left:100px;
+    font-size: 20px;
+}
+.custom-button{
+    background: linear-gradient(45deg,#2caede,#bbc5cf);
+    color: white;
+    padding: 10px 120px;
+    border: none;
+    border-radius: 15px;
+    font-size: 33px;
+    cursor: pointer;
+    margin-left: 300px;
+    margin-top: -400px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.home button:hover {
+    background-color: #21718e;
+}
+
+/* Specialties and Services Section */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    gap: 20px;
+    position: relative;
+    cursor: grab;
+}
+
+.card {
+    flex: 0 0 calc(25% - 10px);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(to right, #09203F ,#537895);
+    color: #f8f9fa;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-container h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-container p, .footer-container a {
+    margin: 5px 0;
+    color: #f8f9fa;
+    text-decoration: none;
+}
+.footer-container,.contact-us{
+    padding-right:200px;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 8px 0;
+}
+
+.social-icons a {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Additional Media Queries for Better Responsiveness */
+
+/* For tablets and devices with max-width 1024px */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 30px;
+    }
+
+    .navbar div {
+        justify-content: center;
+        gap: 10px;
+        padding-right: 0;
+    }
+
+    .home {
+        background-size: cover;
+        justify-content: center;
+        height: auto;
+        padding: 100px 20px;
+    }
+
+    .kk {
+        padding: 50px 20px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .custom-button {
+        font-size: 24px;
+        padding: 10px 50px;
+        margin: 20px 0;
+    }
+
+    h1, p {
+        margin-left: 0;
+    }
+}
+
+/* For mobile devices with max-width 768px */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar .logo {
+        font-size: 2em;
+    }
+
+    .home {
+        height: auto;
+        padding: 80px 10px;
+        background-position: center;
+    }
+
+    .kk {
+        padding: 30px 10px;
+        font-size: 16px;
+    }
+
+    .custom-button {
+        font-size: 20px;
+        padding: 8px 30px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons a {
+        margin: 10px;
+    }
+}
+
+/* For very small devices (phones under 576px) */
+@media screen and (max-width: 576px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar .logo {
+        font-size: 1.5em;
+    }
+
+    .custom-button {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+    .kk {
+        padding: 20px 5px;
+        font-size: 14px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+}
+

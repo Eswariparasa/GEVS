@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Core Subjects</title>
+    <link rel="stylesheet" href="cselang.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .language {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .language h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .language p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to IT Core Subjects</h1>
+        <p>Explore the essential core subjects in Information Technology (IT)</p>
+    </header>
+
+    <div class="container">
+        <section class="language" id="data-structures">
+            <h2>Data Structures</h2>
+            <p>Data Structures involve the study of organizing, managing, and storing data efficiently to enable effective access and modification.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="operating-systems">
+            <h2>Operating Systems</h2>
+            <p>Operating Systems manage computer hardware and software resources and provide services for computer programs, enabling efficient task management.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="databases">
+            <h2>Databases</h2>
+            <p>Databases involve the organization, storage, and retrieval of data using relational and non-relational models, ensuring data integrity and accessibility.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="networking">
+            <h2>Networking</h2>
+            <p>Networking involves the study of communication protocols, network topologies, and the design and management of data networks for information exchange.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="software-engineering">
+            <h2>Software Engineering</h2>
+            <p>Software Engineering covers the systematic design, development, testing, and maintenance of software applications, ensuring high-quality and efficient solutions.</p>
+            <button>Attempt Quiz</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 IT Core Subjects. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showDetails(languageDetails) {
+            var details = document.getElementById(languageDetails);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

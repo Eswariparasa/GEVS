@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Programming Languages</title>
+    <link rel="stylesheet" href="cselang.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .language {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .language h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .language p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to CSE Programming Languages</h1>
+        <p>Learn about the most popular programming languages in Computer Science Engineering (CSE)</p>
+    </header>
+
+    <div class="container">
+        <section class="language" id="python">
+            <h2>Python</h2>
+            <p>Python is an interpreted, high-level, general-purpose programming language. It is widely used for web development, data analysis, machine learning, and automation.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="java">
+            <h2>Java</h2>
+            <p>Java is a high-level, class-based, object-oriented programming language. It is used for building enterprise-level applications, web apps, and mobile apps.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="css">
+            <h2>CSS</h2>
+            <p>CSS (Cascading Style Sheets) is used to style and format the layout of a webpage. It controls the visual appearance of web elements, such as colors, fonts, and spacing.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="html">
+            <h2>HTML</h2>
+            <p>HTML (HyperText Markup Language) is the standard language for creating webpages. It structures the content of a webpage using tags and attributes.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="javascript">
+            <h2>JavaScript</h2>
+            <p>JavaScript is a high-level programming language primarily used for web development. It allows developers to create interactive and dynamic websites.</p>
+            <button>Attempt Quiz</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 CSE Programming Languages. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showDetails(languageDetails) {
+            var details = document.getElementById(languageDetails);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

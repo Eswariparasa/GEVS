@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Get Started</title>
+    <link rel="stylesheet" href="question.css">
+</head>
+<body>
+    <div class="container">
+        <div class="exercise-header">
+            <h2>Exercise: Python Get Started</h2>
+        </div>
+        <p class="instruction">What is a correct command line syntax for checking if python is installed on your computer? (And also to check the Python version)</p>
+        <form id="question-form">
+            <div class="option">
+                <input type="radio" id="option1" name="answer" value="python --version">
+                <label for="option1">python --version</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="option2" name="answer" value="python ##version">
+                <label for="option2">python ##version</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="option3" name="answer" value="python version">
+                <label for="option3">python version</label>
+            </div>
+            <button type="submit" class="submit-button">Submit Answer</button>
+        </form>
+        <div id="feedback"></div>
+    </div>
+
+    <script>
+        // JavaScript to handle the form submission and give feedback
+        document.getElementById('question-form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent form from submitting normally
+            
+            // Get the selected answer
+            const selectedOption = document.querySelector('input[name="answer"]:checked');
+            
+            // Get the feedback element
+            const feedbackElement = document.getElementById('feedback');
+            
+            if (!selectedOption) {
+                // If no answer is selected
+                feedbackElement.innerHTML = '<p style="color: red;">Please select an answer.</p>';
+            } else {
+                const selectedAnswer = selectedOption.value;
+                
+                // Check if the answer is correct
+                if (selectedAnswer === 'python --version') {
+                    feedbackElement.innerHTML = '<p style="color: green;">Correct! The command to check Python version is: python --version</p>';
+                } else {
+                    feedbackElement.innerHTML = '<p style="color: red;">Incorrect. Please try again.</p>';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+

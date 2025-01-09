@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECE Core Subjects</title>
+    <link rel="stylesheet" href="cselang.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .language {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .language h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .language p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to ECE Core Subjects</h1>
+        <p>Explore the essential core subjects in Electrical and Communication Engineering (ECE)</p>
+    </header>
+
+    <div class="container">
+        <section class="language" id="analog-electronics">
+            <h2>Analog Electronics</h2>
+            <p>Analog Electronics involves the study of circuits and devices that use continuous signals, including amplifiers, oscillators, and filters.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="digital-electronics">
+            <h2>Digital Electronics</h2>
+            <p>Digital Electronics focuses on the study of circuits that use discrete signals, such as logic gates, flip-flops, and binary operations.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="signals-systems">
+            <h2>Signals and Systems</h2>
+            <p>Signals and Systems deals with the analysis of various signals (continuous and discrete) and systems used for processing these signals.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="communication-systems">
+            <h2>Communication Systems</h2>
+            <p>Communication Systems involves the study of systems used to transmit and receive information, including modulation techniques and signal transmission protocols.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="electromagnetic-theory">
+            <h2>Electromagnetic Theory</h2>
+            <p>Electromagnetic Theory focuses on the study of electromagnetic fields, wave propagation, and their applications in modern communication systems.</p>
+            <button>Attempt Quiz</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ECE Core Subjects. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showDetails(languageDetails) {
+            var details = document.getElementById(languageDetails);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

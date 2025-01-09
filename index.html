@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Examination System</title>
+    <link rel="stylesheet" href="home.css">
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo1">
+            <img src="logo2.jpg" alt="Mock and Roll Logo">
+        </div>
+        <div class="logo">Mock and Roll</div>
+        <div>
+            <a onclick="window.location.href='about.html'">About Us</a>
+            <a onclick="window.location.href='features.html'">Features</a>
+            <a onclick="window.location.href='signin.html'">Sign In</a>
+            <a onclick="window.location.href='signup.html'">Sign Up</a>
+            <a onclick="window.location.href='contact.html'">Contact</a>
+        </div>
+    </div>
+    <div class="home">
+        <div class="kk">
+        <a class="custom-button" onclick="window.location.href='usertyp.html'">GET STARTED </a>
+        <h1>About Us</h1>
+        <p>Mock and Roll is your ultimate partner for campus recruitment success. Our platform offers realistic mock tests designed to prepare students for every stage of the hiring process, from aptitude rounds to personal interviews. With personalized feedback, company-specific tests, and a user-friendly interface, we ensure you're ready to face any recruitment challenge. Take your preparation to the next level—start practicing today!"</p>
+        </div>
+    </div>
+    <div id="services" class="section">
+        <h2>Features</h2>
+        <div class="container">
+            <div class="card">
+                <img src="features1.jpg" alt="Instant Results">
+                <h3>Instant Results</h3>
+            </div>
+            <div class="card">
+                <img src="feature3.jpg" alt="Variety of Question Formats">
+                <h3>Variety of Question Formats</h3>
+            </div>
+            <div class="card">
+                <img src="feature4.jpg" alt="Customizable Test Settings ">
+                <h3>Customizable Test Settings </h3>
+            </div>
+            <div class="card">
+                <img src="feature5.jpg" alt=">Mobile Compatability">
+                <h3>Mobile Compatability</h3>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-us">
+                <h4>Contact Us</h4>
+                <p><strong>Working Hours:</strong> 9:00 AM - 4:00 PM</p>
+                <p><strong>Phone:</strong> <a href="tel:01141183001">011-4567 0123</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/919818093267">+91 9876543210</a></p>
+                <p><strong>Email:</strong> <a href="mailto:support@mockandroll.in">support@mockandroll.in</a></p>
+            </div>
+            <div class="follow-us">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="face.jpg" alt="Facebook" style="border-radius: 10px;"></a>
+                    <a href="#"><img src="twit.jpg" alt="Twitter" style="border-radius: 10px;"></a>
+                    <a href="#"><img src="insta.jpg" alt="Instagram" style="border-radius: 10px;"></a>
+                    <a href="#"><img src="lin.jpg" alt="LinkedIn" style="border-radius: 10px;"></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p style="text-align: center; padding-top: 10px;">&copy; 2024 Mock And roll. All rights reserved.</p>
+        <p style="text-align: center;">Designed To Enhance the Skills</p>
+    </footer>
+
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBi0Y_HHwH35g55Ke8rSo6kI05mvuKZuE0",
+  authDomain: "examination-system-bea67.firebaseapp.com",
+  projectId: "examination-system-bea67",
+  storageBucket: "examination-system-bea67.firebasestorage.app",
+  messagingSenderId: "60785316053",
+  appId: "1:60785316053:web:20728fec9fd317f244d25c",
+  measurementId: "G-QYR2PH2PD2"
+};
+    </script>
+    import{initializeAPP} from 'firebase/app'
+    import{getAuth,signInWithEmailAndPassword,createUserWithEmailAndPassword}from'firebase/auth'
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slanted Containers</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+      display: flex;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      position: relative; /* Needed for absolute positioning of the logo and name */
+    }
+
+    /* Header with logo and name */
+    .header {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 20px;
+      left: 20px; /* Position the logo and name in the left corner */
+    }
+
+    .logo {
+      width: 570px; /* Logo size increased */
+      height: 570px;
+      margin-right: 15px;
+    }
+
+    .name {
+      font-size: 36px; /* Increased font size for the name */
+      font-weight: bold;
+      color: rgb(49, 35, 35);
+      
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -450px; /* Added some space from the top header */
+    }
+
+    .slanted-box {
+      
+      border-radius: 5%;
+      width: 500px; /* Increased width */
+      height: 350px; /* Increased height */
+      margin: 0 50px; /* Increased margin for better spacing */
+      background-color: #3498db;
+      transform-origin: center;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      transition: transform 0.3s ease, background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+      cursor: pointer; /* Indicates that the box is clickable */
+      overflow: hidden; /* Ensures images stay within box */
+    }
+
+    .slanted-box:hover {
+      outline: none;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+      
+      
+    }
+
+    /* Apply different slants for each box (diagonal effect) */
+    .slanted-box:nth-child(1) {
+      transform: rotate(5deg) translateX(50px) translateY(50px);
+    }
+
+    .slanted-box:nth-child(2) {
+      transform: rotate(10deg) translateX(100px) translateY(100px);
+    }
+
+    .slanted-box:nth-child(3) {
+      transform: rotate(15deg) translateX(150px) translateY(150px);
+    }
+
+    .slanted-box:nth-child(4) {
+      transform: rotate(20deg) translateX(200px) translateY(200px);
+    }
+
+    .slanted-box:nth-child(5) {
+      transform: rotate(25deg) translateX(250px) translateY(250px);
+    }
+
+    .slanted-box:nth-child(6) {
+      transform: rotate(30deg) translateX(300px) translateY(300px);
+    
+    }
+
+    .slanted-box p {
+      color: white;
+      text-align: center;
+      line-height: 350px; /* Adjusted line-height for larger boxes */
+      font-size: 40px; /* Increased font size */
+      margin: 0;
+    }
+
+    /* Adding image inside the box */
+    .slanted-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the image fills the box without distortion */
+    }
+
+    /* Style when box is clicked (opened) */
+    .open {
+      background-color: #2ecc71; /* Green color when opened */
+      width: 600px; /* Increased size when clicked */
+      height: 450px; /* Increased size when clicked */
+      transform: rotate(0deg) !important; /* Remove rotation when opened */
+    }
+
+    /* Hidden class for hiding boxes */
+    .hidden {
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header Section with Logo and Name -->
+  <div class="header">
+    <img src="logpic.png" alt="Logo" class="logo">
+    <div class="name">Select your branch!</div>
+  </div>
+
+  <div class="container">
+    <div class="slanted-box" onclick="openBox(this)">
+      <img src="https://raw.githubusercontent.com/Eswariparasa/Mock_test/refs/heads/main/pse7.jpg" alt="Image 1">
+      <p>Box 1</p>
+    </div>
+    <div class="slanted-box" onclick="openBox(this)">
+      <img src="https://raw.githubusercontent.com/Eswariparasa/Mock_test/refs/heads/main/pse8.jpg" alt="Image 2">
+      <p>Box 2</p>
+    </div>
+    <div class="slanted-box" onclick="openBox(this)">
+      <img src="https://raw.githubusercontent.com/Eswariparasa/Mock_test/refs/heads/main/pse9.jpg" alt="Image 3">
+      <p>Box 3</p>
+    </div>
+    <div class="slanted-box" onclick="openBox(this)">
+      <img src="https://raw.githubusercontent.com/Eswariparasa/Mock_test/refs/heads/main/pse10.jpg" alt="Image 4">
+      <p>Box 4</p>
+    </div>
+    <div class="slanted-box" onclick="openBox(this)">
+      <img src="https://raw.githubusercontent.com/Eswariparasa/Mock_test/refs/heads/main/pse11.jpg" alt="Image 5">
+      <p>Box 5</p>
+    </div>
+    <div class="slanted-box" onclick="openBox(this)">
+      <img src="civil.jpg" alt="Image 6">
+      <p>Box 6</p>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to toggle the "open" state of the boxes and hide other boxes
+    function openBox(box) {
+      // Toggle the 'open' class for the clicked box
+      box.classList.toggle('open');
+      
+      // Hide all boxes
+      const boxes = document.querySelectorAll('.slanted-box');
+      boxes.forEach((b) => {
+        if (b !== box) {
+          b.classList.add('hidden');
+        }
+      });
+      
+      // If the box is not open, show all boxes again
+      if (!box.classList.contains('open')) {
+        boxes.forEach((b) => {
+          b.classList.remove('hidden');
+        });
+      }
+    }
+  </script>
+</body>
+</html>

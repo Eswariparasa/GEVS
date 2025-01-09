@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    label {
+      font-size: 14px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #error-message {
+      color: red;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Admin Login</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter Username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+      </div>
+      <button type="submit" onclick="validateLogin(event)">Login</button>
+    </form>
+    <div id="error-message"></div>
+  </div>
+
+  <script>
+    function validateLogin(event) {
+      event.preventDefault();
+
+      // Get username and password
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Define valid credentials (you can replace with actual database or backend verification)
+      const validUsername = "admin";
+      const validPassword = "admin123";
+
+      const errorMessage = document.getElementById('error-message');
+
+      // Check if credentials match
+      if (username === validUsername && password === validPassword) {
+        errorMessage.textContent = "";
+        alert("Login successful!");
+        // Redirect to the dashboard (this could be a different page)
+        window.location.href = "dashboard.html"; // Replace with the actual page path
+      } else {
+        errorMessage.textContent = "Invalid username or password!";
+      }
+    }
+  </script>
+</body>
+</html>

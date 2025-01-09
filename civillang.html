@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civil Engineering Core Subjects</title>
+    <link rel="stylesheet" href="cselang.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .language {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .language h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .language p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Civil Engineering Core Subjects</h1>
+        <p>Explore the essential core subjects in Civil Engineering</p>
+    </header>
+
+    <div class="container">
+        <section class="language" id="structural-analysis">
+            <h2>Structural Analysis</h2>
+            <p>Structural Analysis involves the study of the behavior of structures such as buildings, bridges, and dams under various loads and forces.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="geotechnical-engineering">
+            <h2>Geotechnical Engineering</h2>
+            <p>Geotechnical Engineering focuses on the study of soil and rock behavior under loading conditions and its impact on construction projects.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="fluid-mechanics">
+            <h2>Fluid Mechanics</h2>
+            <p>Fluid Mechanics deals with the behavior of fluids (liquids and gases) in motion and at rest, and its applications in various engineering systems.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="transportation-engineering">
+            <h2>Transportation Engineering</h2>
+            <p>Transportation Engineering involves the design, construction, and maintenance of transportation systems, including roads, railways, and airports.</p>
+            <button>Attempt Quiz</button>
+        </section>
+
+        <section class="language" id="environmental-engineering">
+            <h2>Environmental Engineering</h2>
+            <p>Environmental Engineering focuses on the study and design of systems to improve and protect the environment, including water treatment and waste management.</p>
+            <button>Attempt Quiz</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Civil Engineering Core Subjects. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showDetails(languageDetails) {
+            var details = document.getElementById(languageDetails);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
